@@ -1,0 +1,123 @@
+[handleMsg]:  {
+  key: {
+    remoteJid: '51982324656@s.whatsapp.net',
+    fromMe: false,
+    id: '294C6C0BDE4ED5CAE7D2D35BD0D99666',
+    participant: undefined
+  },
+  messageTimestamp: 1718264523,
+  pushName: '~sss',
+  broadcast: false,
+  message: Message {
+    conversation: 'Hola',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Hola',
+  from: '51982324656'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_f4295e13-17a5-4a54-aaf4-d265b45f676c',
+  keyword: 'key_3e335058-87e2-4619-a427-4eb25602f9f0',
+  answer: '🙌 Hola bienvenido al Centro de Idiomas',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '5d2140bbb340c33ce67436604574c64e'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_37be24f2-79ce-4757-83ee-91135062ce80',
+  keyword: 'ans_f4295e13-17a5-4a54-aaf4-d265b45f676c',
+  answer: 'Gracias por contactar al Centro de Idiomas, que consulta desea realizar: \n' +
+    '👉 *Matrículas*\n' +
+    '👉 *Examenes* (suficiencia y reubicación)\n' +
+    '👉 *Certificados/diplomas*\n' +
+    '👉 *Visaciones*',
+  options: {
+    media: null,
+    buttons: [],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object],
+      [Object], [Object]
+    ],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '7cc611cff69536a0559dbb1adbe52a32'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51982324656@s.whatsapp.net',
+    fromMe: false,
+    id: 'DD2C047797EE5733F6F2D2027025C34F',
+    participant: undefined
+  },
+  messageTimestamp: 1718264526,
+  pushName: '~sss',
+  broadcast: false,
+  message: Message {
+    conversation: 'Botones',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'Botones',
+  from: '51982324656'
+}
+[handleMsg]:  {
+  key: {
+    remoteJid: '51982324656@s.whatsapp.net',
+    fromMe: false,
+    id: '534A0321341DEE57657C9F8BE0AA35E7',
+    participant: undefined
+  },
+  messageTimestamp: 1718264537,
+  pushName: '~sss',
+  broadcast: false,
+  message: Message {
+    conversation: 'botones',
+    messageContextInfo: MessageContextInfo {
+      deviceListMetadata: [DeviceListMetadata],
+      deviceListMetadataVersion: 2
+    }
+  },
+  body: 'botones',
+  from: '51982324656'
+}
+[QUEUE_SE_ENVIO]:  {
+  ref: 'ans_6c9d33dd-6928-4d4e-a7e1-71b505731bd2',
+  keyword: 'key_fe325dde-85d1-45d0-a633-ab038b3f52ec',
+  answer: 'Estps son los botones',
+  options: {
+    media: null,
+    buttons: [ [Object], [Object] ],
+    capture: false,
+    child: null,
+    delay: 0,
+    idle: null,
+    ref: null,
+    nested: [],
+    keyword: {},
+    callback: false
+  },
+  refSerialize: '8b05a6aa4d94655e09922fbae96fa5b6'
+}
