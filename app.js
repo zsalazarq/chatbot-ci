@@ -4,8 +4,6 @@ const QRPortalWeb = require('@bot-whatsapp/portal')
 const BaileysProvider = require('@bot-whatsapp/provider/baileys')
 const MockAdapter = require('@bot-whatsapp/database/mock')
 
-
-
 const flowSecundario = addKeyword(['2', 'siguiente']).addAnswer(['📄 Aquí tenemos el flujo secundario'])
 
 const flowDocs = addKeyword(['doc', 'documentacion', 'documentación']).addAnswer(
@@ -50,24 +48,31 @@ const flowDiscord = addKeyword(['discord']).addAnswer(
     [flowSecundario]
 )
 
+const flowCertificaciones = addKeyword(['c','certificados','diplomas']).addAnswer(
+    ['Recuerde, que para quienes estudiaron en el Centro de Idiomas de la UAC tienen máximo 2 años para tramitar el certificado y diploma, a partir de la fecha de haber terminado de estudiar el nivel y haber aprobado; pasado ese tiempo debe aplicar a un examen de suficiencia.',
+    'Para los estudiantes que dieron el *EXAMEN DE SUFICIENCIA*, tiene solo 3 meses para solicitar su certificado y diploma a partir del mes que dio el examen.',
+    '\n 	Quienes estudiaron antes de noviembre de 2022 el idioma en su Filial, deben solicitar los requisitos y códigos de pago con los secretarios de su Filial con quienes harán el trámite directamente.',
+    '\n*A.* Requerimientos y pasos']
+)
+
 const flowPrincipal = addKeyword(['hola', 'ole', 'alo'])
     .addAnswer('🙌 Hola bienvenido al Centro de Idiomas')
     .addAnswer(
         [
             'Gracias por contactar al Centro de Idiomas, que consulta desea realizar: ',
-            '👉 *Matrículas*',
-            '👉 *Examenes* (suficiencia y reubicación)',
-            '👉 *Certificados/diplomas*',
-            '👉 *Visaciones*',
+            '👉 *A.* Matrículas',
+            '👉 *B.* Examenes (suficiencia y reubicación)',
+            '👉 *C.* Certificados/diplomas',
+            '👉 *D.* Visaciones',
         ],
         null,
         null,
-        [flowDocs, flowGracias, flowTuto, flowDiscord]
+        [flowDocs, flowGracias, flowCertificaciones, flowDiscord]
     )
 
 const main = async () => {
     const adapterDB = new MockAdapter()
-    const adapterFlow = createFlow([flowPrincipal, flowBotones])
+    const adapterFlow = createFlow([flowPrincipal])
     const adapterProvider = createProvider(BaileysProvider)
 
     createBot(
