@@ -1,8 +1,8 @@
 import { addKeyword } from "@builderbot/bot";
 import idiomasHorariosFlow from "./idiomasHorariosFlow"
-import cronogramaMatriculasFlow from "./idiomasHorariosFlow"
-import procesoEstudianteNuevoFlow from "./idiomasHorariosFlow"
-import procesoMatriculaFlow from "./idiomasHorariosFlow"
+import cronogramaMatriculasFlow from "./cronogramaMatriculasFlow"
+import procesoEstudianteNuevoFlow from "./procesoEstudianteNuevoFlow"
+import procesoMatriculaFlow from "./procesoMatriculaFlow"
 import mainFlow from "../../app"
 
 const matriculasFlow = addKeyword(['1', 'matriculas', 'matrícula'])

@@ -3,7 +3,7 @@ import examenesFlow from "./examenesFlow"
 import mainFlow from "../../app"
 
 const examenSuficienciaFlow = addKeyword(['a', 'suficiencia'])
-  .addAnswer('Información sobre el examen de suficiencia:')
+  .addAnswer('Sobre el examen de suficiencia:')
   .addAnswer(
     ['Este examen lo rinden:',
       '- Alumnos que no tramitaron su certificado y diploma dentro de los 2 años que contempla el reglamento como tiempo límite',

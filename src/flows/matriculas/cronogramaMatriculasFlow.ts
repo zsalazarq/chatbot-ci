@@ -3,11 +3,21 @@ import mainFlow from "../../app"
 import matriculasFlow from "./matriculasFlow"
 
 const cronogramaMatriculasFlow = addKeyword(['b', 'cronograma'])
-    .addAnswer('Cronograma de matrículas para Junio:')
+    .addAnswer('*Octubre*')
     .addAnswer(
-        ['Habilitaciones: Por confirmar',
-            'Matrículas: Por confirmar',
-            'Inicio de clases: Por confirmar']
+        ['Habilitaciones: Del 24 al 30 de septiembre, 2024',
+            'Matrículas: 01, 02 y 03 de octubre, 2024',
+            'Inicio de clases: 07 de octubre, 2024']
+    ).addAnswer('*Noviembre*')
+    .addAnswer(
+        ['Habilitaciones: Del 25 al 30 de octubre, 2024',
+            'Matrículas: 01, 02, 03 y 04 de noviembre, 2024',
+            'Inicio de clases: 06 de noviembre, 2024']
+    ).addAnswer('*Diciembre*')
+    .addAnswer(
+        ['Habilitaciones: Del 25 al 29 de noviembre, 2024',
+            'Matrículas: 02 y 03 de diciembre, 2024',
+            'Inicio de clases: 04 de diciembre, 2024']
     )
     .addAnswer('¿Deseas volver al menú de matrículas? (Sí/No)', { capture: true },
         async (ctx, { gotoFlow }) => {

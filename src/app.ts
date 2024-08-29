@@ -16,8 +16,14 @@ import infoFilialesFlow from './flows/certificados/infoFilialesFlow'
 import requisitosVisacionFlow from './flows/visaciones/requisitosVisacionFlow'
 import pasosValidacionFlow from './flows/visaciones/pasosValidacionFlow'
 
-const mainFlow = addKeyword(['hola', 'menu', 'inicio'])
-  .addAnswer('Bienvenido al Centro de Idiomas de la Universidad Andina del Cusco. ¿En qué puedo ayudarte?')
+const welcomeFlow = addKeyword(['hola', 'inicio'])
+  .addAnswer('Bienvenido al Centro de Idiomas de la Universidad Andina del Cusco.')
+  .addAnswer('', null, async (_, { gotoFlow }) => {
+    return gotoFlow(mainFlow)
+  })
+
+const mainFlow = addKeyword(['menu', 'principal'])
+  .addAnswer('¿En qué puedo ayudarte?')
   .addAnswer(
     ['Selecciona una opción:',
       '1. Matrículas',
@@ -40,6 +46,7 @@ const mainFlow = addKeyword(['hola', 'menu', 'inicio'])
 const main = async () => {
   const adapterDB = new MemoryDB()
   const adapterFlow = createFlow([
+    welcomeFlow,
     mainFlow,
     matriculasFlow,
     idiomasHorariosFlow,
@@ -65,9 +72,9 @@ const main = async () => {
     database: adapterDB,
   })
 
-  httpServer(3000) // Start the HTTP server on port 3000
+  httpServer(3001) // Start the HTTP server on port 3001
 }
 
 main()
 
-export default mainFlow
+export default mainFlow 
