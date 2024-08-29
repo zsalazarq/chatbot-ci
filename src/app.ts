@@ -1,4 +1,5 @@
 import { createBot, createProvider, createFlow, addKeyword, MemoryDB } from '@builderbot/bot'
+import QRPortalWeb from '@builderbot/bot'
 import { BaileysProvider } from '@builderbot/provider-baileys'
 import matriculasFlow from './flows/matriculas/matriculasFlow'
 import examenesFlow from './flows/examenes/examenesFlow'
@@ -72,7 +73,7 @@ const main = async () => {
     database: adapterDB,
   })
 
-  httpServer(4001)
+  httpServer(3009)
 }
 
 main()
