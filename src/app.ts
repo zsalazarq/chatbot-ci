@@ -72,7 +72,7 @@ const main = async () => {
     database: adapterDB,
   })
 
-  httpServer(3001) // Start the HTTP server on port 3001
+  httpServer(3000) // Start the HTTP server on port 3001
 }
 
 main()
