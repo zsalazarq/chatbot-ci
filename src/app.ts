@@ -16,6 +16,8 @@ import infoFilialesFlow from './flows/certificados/infoFilialesFlow'
 import requisitosVisacionFlow from './flows/visaciones/requisitosVisacionFlow'
 import pasosValidacionFlow from './flows/visaciones/pasosValidacionFlow'
 
+const QRPortal = require("@builderbot/bot")
+
 const welcomeFlow = addKeyword(['hola', 'inicio'])
   .addAnswer('Bienvenido al Centro de Idiomas de la Universidad Andina del Cusco.')
   .addAnswer('', null, async (_, { gotoFlow }) => {
@@ -75,6 +77,7 @@ const main = async () => {
   httpServer(3000) // Start the HTTP server on port 3001
 }
 
+QRPortal({port:4001})
 main()
 
 export default mainFlow 
